@@ -8,7 +8,10 @@ ul li{list-style-type: none;}
     height: auto;
     color: white;
     font-size: 40px;
-    background: url(offer-background.jpg) , center , center/cover , no-repeat;
+    background-image: url(offer-background.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
     display: flex;
 }
 .gallery .content{
