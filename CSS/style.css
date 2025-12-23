@@ -1,0 +1,102 @@
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+body{ scroll-behavior: smooth; overflow-x: hidden; font-family:'Quicksand', sans-serif; }
+a{color: aliceblue; text-decoration: none;}
+ul li{list-style-type: none;}
+.container{width: 80%; margin: auto;}
+.gallery{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 40px;
+    background: url(../images/offer-background.jpg) , center , center/cover , no-repeat;
+    display: flex;
+}
+.gallery .content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+.gallery .images-gallery{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;;
+}
+.gallery .images-gallery img{
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    opacity: 0.5;
+    transition: all 2s ease 1s;
+}
+.gallery .images-gallery img:hover{opacity: 1; width: 400px; cursor:zoom-in;}
+
+#boxContainer{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top:0 ;
+    left:0;
+    z-index: 999;
+    cursor: pointer;
+}
+#boxItem{
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    cursor:default;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#prev,#next,#close{
+    color: rgb(250, 240, 200);
+    font-size: 28px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+#prev:hover,#next:hover,#close:hover{
+    color: rgb(255, 197, 51);
+    cursor: pointer;
+}
+#prev{
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+#next{
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+#close{
+    top: 25px;
+    right: 20px;
+    transform: translateY(-10%);
+}
+
+@media (max-width:500px) {
+    .gallery{height: auto; font-size: 24px;}
+    .gallery .content{padding: 100px 0;}
+    .gallery h1{text-align: center;}
+    .gallery .images{flex-direction: column;}
+    .gallery .images img{width: 250px;height: 200px;}
+    .gallery .images img:hover{width: 270px;height: 250px;}
+    
+}
+
+@media ((min-width:501px) and (max-width:1000px) ) {
+    .gallery{height: auto; font-size: 28px;}
+    .gallery .content{padding: 100px 0;}
+    .gallery h1{text-align: center;}
+    .gallery .images{flex-direction: column;}
+}
